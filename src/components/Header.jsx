@@ -1,4 +1,5 @@
 import logoImage from "../assets/transpoint-logo.png";
+import '../styles/Header.css'
 
 const Header = () => {
   return (
