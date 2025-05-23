@@ -1,15 +1,15 @@
 @import "./App.css";
 
 .home-page {
-  position: relative;
+  /* position: relative; */
 }
 .video-container {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
   height: 500px;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -20,11 +20,75 @@
   display: block;
 }
 .video-overlay {
-z-index: 9;
+  z-index: 9;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #182e3960;
+  background-color: #182e395c;
+}
+.hero-title-container {
+  z-index: 15;
+  position: absolute;
+  top: 26%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  left: 10%;
+  right: 10%;
+}
+.hero-title-container h1 {
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+.hero-title-container h1 span {
+  color: var(--tertiary-color);
+}
+.hero-title-container p {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-top: 0px;
+}
+.filter-overlay-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 8px 18px;
+  z-index: 15;
+  position: absolute;
+  top: 60%;
+  left: 22%;
+  right: 22%;
+  border-radius: 20px;
+}
+.filter-overlay-container div p {
+  margin: 3px 0px;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+.search--container {
+  background-color: var(--tertiary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 5px;
+}
+.search--container img {
+  width: 23px;
+  height: 23px;
+}
+.filter-type-container {
+  border-right: 1px solid gray;
+  padding: 0px 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-type-container img {
+  width: 16px;
+  height: 16px;
 }
