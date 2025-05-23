@@ -11,6 +11,8 @@ const Header = () => {
         <p>Sell Property</p>
         <p>Rent Property</p>
         <p>Other Services</p>
+        <p>Login</p>
+        <button>Sign Up</button>
       </div>
     </nav>
   );
