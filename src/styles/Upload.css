@@ -3,8 +3,6 @@
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  color: #333;
 }
 
 /* Header responsiveness */
@@ -26,7 +24,6 @@
   font-size: 2rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #333;
 }
 
 .admin-title p {
@@ -106,7 +103,6 @@
   font-size: 1.25rem;
   margin-bottom: 1rem;
   font-weight: 600;
-  color: #333;
 }
 
 .form-section h4 {
