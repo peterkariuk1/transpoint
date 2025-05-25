@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import UploadCatalogue from "./Upload";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
+import Property from "../pages/Property";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/upload" element={<UploadCatalogue />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
+        <Route path="/property" element={<Property />}></Route>
       </Routes>
     </BrowserRouter>
   );
