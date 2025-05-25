@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
-import "../styles/Login.css";
-=======
-import { Link } from "react-router-dom"
-import "../styles/Auth.css"
->>>>>>> b6aa062f2875928ea8b07ddbf1d7da3904ca2e7b
+import "../styles/Auth.css";
 
 function Signup() {
   return (
