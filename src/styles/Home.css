@@ -50,6 +50,34 @@
   font-weight: 600;
   margin-top: 0px;
 }
+.mobile-filter-overlay{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 15px;
+  z-index: 15;
+  position: absolute;
+  top: 70%;
+  left: 22%;
+  right: 22%;
+  border-radius: 20px;
+}
+.filters-button{
+  background-color: transparent;
+  color: var(--primary-color);
+  font-size: 18px;
+  border: 1.4px solid #d72d44;
+  padding: 4px 22px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.arrow-white{
+  width: 20px;
+  height: 20px;
+}
+
 .filter-overlay-container {
   display: flex;
   justify-content: space-between;

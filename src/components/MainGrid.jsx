@@ -8,6 +8,10 @@ import landIcon from "../assets/land-icon.png";
 const MainGrid = () => {
   const [showMoreFilters, setShowMoreFilters] = useState(false);
   const [selected, setSelected] = useState([]);
+  const [minPrice, setMinPrice] = useState(100);
+  const [maxPrice, setMaxPrice] = useState(800);
+  const [listingType, setListingType] = useState("Rent");
+  const [location, setLocation] = useState("");
 
   const propertyTypes = [
     { name: "House", icon: houseIcon },
@@ -73,18 +77,85 @@ const MainGrid = () => {
         >
           {showMoreFilters ? "Show less ▲" : "Show more ▼"}
         </p>
-         {showMoreFilters && (
-    <div className="more-filters">
-      <div className="filter-group">
-        <label>Price Range:</label>
-        <input type="range" min="0" max="1000" />
-      </div>
-      <div className="filter-group">
-        <label>Location:</label>
-        <input type="text" placeholder="Enter city or neighborhood" />
-      </div>
-    </div>
-  )}
+
+        {showMoreFilters && (
+          <div className="more-filters">
+            {/* Min–Max Price Range */}
+            <div className="filter-group">
+              <label>Price Range (Ksh):</label>
+              <div className="price-sliders">
+                <div>
+                  <p className="max-min-text">Set minimum price:</p>
+                  <input
+                    type="range"
+                    min="0"
+                    max="1000"
+                    step="50"
+                    value={minPrice}
+                    onChange={(e) => {
+                      const newMin = Number(e.target.value);
+                      if (newMin <= maxPrice) setMinPrice(newMin);
+                    }}
+                  />
+                </div>
+                <div>
+                  <p className="max-min-text">Set maximum price:</p>
+                  <input
+                    type="range"
+                    min="0"
+                    max="1000"
+                    step="50"
+                    value={maxPrice}
+                    onChange={(e) => {
+                      const newMax = Number(e.target.value);
+                      if (newMax >= minPrice) setMaxPrice(newMax);
+                    }}
+                  />
+                </div>
+              </div>
+              <p className="price-display">
+                Ksh {minPrice}K – {maxPrice}K
+              </p>
+            </div>
+
+            {/* Rent or Sale Toggle */}
+            <div className="filter-group">
+              <label>Property Type:</label>
+              <div className="radio-toggle">
+                <label>
+                  <input
+                    type="radio"
+                    value="Rent"
+                    checked={listingType === "Rent"}
+                    onChange={() => setListingType("Rent")}
+                  />
+                  Rent
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    value="Sale"
+                    checked={listingType === "Sale"}
+                    onChange={() => setListingType("Sale")}
+                  />
+                  Sale
+                </label>
+              </div>
+            </div>
+
+            {/* Location Input */}
+            <div className="filter-group">
+              <label>Location:</label>
+              <input
+                type="text"
+                className="location-input"
+                placeholder="e.g. Nairobi, Kilimani, Westlands"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+              />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

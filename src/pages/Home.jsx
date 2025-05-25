@@ -2,6 +2,7 @@ import "../styles/Home.css";
 import heroVideo from "../assets/herovideo.mp4";
 import searchIcon from "../assets/search1.png";
 import arrowDown from "../assets/arrowdown.png";
+import arrowDownW from "../assets/arrowwhite.png";
 import Header from "../components/Header";
 const Home = () => {
   return (
@@ -25,7 +26,7 @@ const Home = () => {
             rent, or sell with ease.
           </p>
         </div>
-        <div className="filter-overlay-container">
+        {/* <div className="filter-overlay-container">
           <div className="filter-type-container">
             <p>Location</p>
 
@@ -45,6 +46,16 @@ const Home = () => {
             <p>Rooms</p>
             <img src={arrowDown} />
           </div>
+          <div className="search--container">
+            <img src={searchIcon} />
+          </div>
+        </div> */}
+        {/* Mobile View JSX*/}
+
+        <div className="mobile-filter-overlay">
+          <button className="filters-button">
+            Filters <img className="arrow-white" src={arrowDownW} alt="arrow" />
+          </button>
           <div className="search--container">
             <img src={searchIcon} />
           </div>
