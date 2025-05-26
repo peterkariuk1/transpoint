@@ -26,7 +26,7 @@ const Home = () => {
             rent, or sell with ease.
           </p>
         </div>
-        {/* <div className="filter-overlay-container">
+        <div className="filter-overlay-container">
           <div className="filter-type-container">
             <p>Location</p>
 
@@ -49,7 +49,7 @@ const Home = () => {
           <div className="search--container">
             <img src={searchIcon} />
           </div>
-        </div> */}
+        </div>
         {/* Mobile View JSX*/}
 
         <div className="mobile-filter-overlay">

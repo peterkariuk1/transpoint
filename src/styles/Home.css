@@ -50,9 +50,9 @@
   font-weight: 600;
   margin-top: 0px;
 }
-.mobile-filter-overlay{
-  display: flex;
-  justify-content:center;
+.mobile-filter-overlay {
+  display: none;
+  justify-content: center;
   align-items: center;
   gap: 15px;
   z-index: 15;
@@ -62,7 +62,17 @@
   right: 22%;
   border-radius: 20px;
 }
-.filters-button{
+@media (max-width: 740px) {
+  .mobile-filter-overlay {
+    display: flex;
+  }
+  .filter-overlay-container {
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+.filters-button {
   background-color: transparent;
   color: var(--primary-color);
   font-size: 18px;
@@ -73,7 +83,7 @@
   align-items: center;
   gap: 8px;
 }
-.arrow-white{
+.arrow-white {
   width: 20px;
   height: 20px;
 }

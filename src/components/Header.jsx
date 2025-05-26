@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logoImage from "../assets/transpoint-logo.png";
 import "../styles/Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,13 +10,19 @@ const Header = () => {
   return (
     <nav className="header-nav">
       <div className="left">
-        <img src={logoImage} alt="Transpoint Logo" />
+        <Link to="/upload" style={{ textDecoration: "none" }}>
+          <img src={logoImage} alt="Transpoint Logo" />
+        </Link>
       </div>
 
       <div className="right desktop-links">
         <p>Contact Us</p>
-        <p>Login</p>
-        <button>Sign Up</button>
+        <Link to="/login" style={{ textDecoration: "none" }}>
+          <p>Login</p>
+        </Link>
+        <Link to="/signup" style={{ textDecoration: "none" }}>
+          <button>Sign Up</button>
+        </Link>
       </div>
 
       <div className="hamburger" onClick={toggleMenu}>
@@ -29,8 +36,12 @@ const Header = () => {
           ×
         </button>
         <p>Contact Us</p>
-        <p>Login</p>
-        <button>Sign Up</button>
+        <Link to="/login" style={{ textDecoration: "none" }}>
+          <p>Login</p>
+        </Link>
+        <Link to="/signup" style={{ textDecoration: "none" }}>
+          <button>Sign Up</button>
+        </Link>
         <div className="brand-message">
           <p>Connecting people to homes with speed, simplicity, and trust.</p>
         </div>
