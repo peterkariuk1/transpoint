@@ -1,0 +1,113 @@
+@import "./App.css";
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 40px;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+
+.footer-section h4 {
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.footer-section p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border-radius: 4px;
+  filter: grayscale(2);
+  transition: 0.4s ease-in-out filter, 0.4s ease-in-out 0.1s transform;
+}
+.social-icons img:hover {
+  filter: grayscale(0);
+  transform: scale(1.06);
+  cursor: pointer;
+}
+.quick-links p {
+  transition: 0.3s ease-in-out color;
+}
+.quick-links p:hover {
+  cursor: pointer;
+  color: var(--tertiary-color);
+}
+
+.listing {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.listing img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.listing p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.listing strong {
+  font-size: 13px;
+  display: block;
+  margin-top: 4px;
+}
+.rights-section p {
+  cursor: pointer;
+  transition: 0.3s ease-in-out color;
+}
+.rights-section p:hover {
+  color: #fff;
+}
+.rights-section {
+  background-color: #131313;
+  color: #7a7a7a;
+  display: flex;
+  padding: 10px 30px;
+  justify-content: space-between;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .footer-section {
+    margin-bottom: 24px;
+    flex: 1 1 1px;
+    /* min-width: 220px; */
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+  }
+  .rights-section p {
+    font-size: 10px;
+  }
+}
