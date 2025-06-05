@@ -8,6 +8,7 @@ import UploadCatalogue from "./Upload";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Property from "../pages/Property";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           element={
             <>
               <Home />
-              <Grids/>
+              <Grids />
+              <Footer />
             </>
           }
         ></Route>
